@@ -4,9 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Index from "./Pages/Index";
-import PropertyDetail from "./Pages/PropertyDetail";
-import NotFound from "./Pages/NotFound.jsx";
+import Index from "./Pages/Index.jsx";
+import PropertyDetail from "./Pages/PropertyDetail.jsx";
+
 
 const queryClient = new QueryClient();
 
@@ -19,7 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/property/:id" element={<PropertyDetail />} />
-          <Route path="*" element={<NotFound />} />
+        
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
